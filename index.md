@@ -7,23 +7,22 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono&display=swap" rel="stylesheet">
-<script type="text/javascript" src="javascript.js" async></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JVS Web Dev Portfolio</title>
+    <title>JVS Portfolio</title>
 </head>
 <body>
     <!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
 <div class="slider">
 <header id="header-container">
   <div>
-    <a href="#welcome-section2"><h1 id="logo"><span class="pink-letter">J</span>ulian <span class="pink-letter">v</span>an <span class="pink-letter">S</span>traten</h1></a>
+    <a href="#welcome-section"><h1 id="logo"><span class="pink-letter">J</span>ulian <span class="pink-letter">v</span>an <span class="pink-letter">S</span>traten</h1></a>
   </div>
   <nav id="navbar">
-    <div class="brackets container">
-        
-        <a href="#projects" id="menu-item1">Portfolio</a>
-        <a href="#contact" id="menu-item2">Contact</a>
-  </div>
+    <ul>
+      
+      <li><a href="#projects">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </nav>
 </header>
 
@@ -33,11 +32,10 @@
 
 <section id="welcome-section2" class="child">
   
-<div id="hero-div">
+
   <h1 id="hero-title">Hello, my name is Julian <br><span id="front-end">I'm a front-end web developer</span><span id="brackets">_</span></h1> 
-  </div> 
-  <a href="#projects" id="arrow1" class="scroll-down"></a>
   
+  <a href="#projects" id="scroll-down"></a>
   
 
 </section>
@@ -73,8 +71,6 @@
  <div id="repo-link" >
 <p>Check out my <a href="https://github.com/Julian-van-Straten" target="_blank" id="profile-link">GitHub</a></p>
 </div>
-<a href="#contact" id="arrow2"></a>
- 
 </section>
 
 <section id="contact" class="full-screen" class="child">
@@ -87,7 +83,7 @@
     <p>Email<span class="pink-letter">:</span> julian.v.straten@gmail.com</p>
   </div>
     
-  <a href="#welcome-section2" id="arrow3" class="back-to-top"></a>
+ 
 </section>
 </slider>
 

@@ -47,6 +47,63 @@ table {
 	border-spacing: 0;
 }
 
+/*nav menu*/
+
+div.container
+{
+  font-family: 'Roboto Mono', monospace;
+  font-size: 25px;
+  
+	
+	
+}
+
+div.container a
+{
+    color: #FFF;
+    text-decoration: none;
+    
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+/* Brackets go out */
+div.brackets a:before, div.brackets a:after
+{
+    position: absolute;
+    opacity: 0;
+    font-size: 25px;
+    color: #00fff5;
+    top: 5px;
+    transition: all 0.3s;
+}
+
+div.brackets a:before
+{
+    content: '{';
+    left: 0px;
+    transform: translateX(10px);
+}
+
+div.brackets a:after
+{
+    content: '}';
+    right: 0px;
+    transform: translateX(-10px);
+}
+
+div.brackets a:hover:before, div.brackets a:hover:after
+{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+div.brackets a:active{
+  opacity: 1;
+  
+}
 
 
 #logo, #navbar{
@@ -54,8 +111,15 @@ table {
   text-transform: lowercase;
 }
 
-#navbar{
+#menu-item1 {
+  display: inline-block;
+  padding-bottom: 10px;
+  
+}
 
+#menu-item2 {
+  display: inline-block;
+  padding-bottom: 10px;
 }
 
 body {
@@ -69,10 +133,9 @@ body {
 }
 
 #welcome-section2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+  grid-template-rows: repeat(10, 10%);
   height: 100vh;  
   z-index: -1;
 }
@@ -151,11 +214,7 @@ li a{
   }
 }
 
-li a:hover{
-  text-decoration:underline;
-  text-decoration-color: #00fff5;
-  
-}
+
 li a:active{
   font-weight: bold;
   
@@ -163,18 +222,34 @@ li a:active{
 #navbar{
   display: block;
 }
-
+#hero-div{
+  display: block;
+  margin: auto;
+  grid-column: 1 / span10;
+  grid-row: 5;
+}
 #hero-title{
   font-family: 'Roboto Mono', monospace;
   color: white;
   font-size: 30px;
   display: block;
+  text-align: left;
   padding: 20px 50px;
   line-height: 35px;
-  
+  animation: fade-in;
+  animation-delay: 1s;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
-
+@keyframes fade-in{
+  0%{
+    opacity: 0;
+  } 100% {
+    opacity: 1;
+  }
+}
 
 #front-end{
   font-size: 18px;
@@ -199,10 +274,11 @@ li a:active{
   50% {opacity:1;}
 }
 
-#scroll-down{
+.scroll-down{
   display: block;
-  position:absolute;  
-  bottom: 50px;
+  position:relative;  
+  bottom: -50px;
+  
   width: 30px;
   height: 30px;
   border: solid 2px #00fff5;
@@ -217,12 +293,52 @@ li a:active{
 }
 
 @keyframes bounce {
-  0%, 100% {bottom:100px; opacity:0.5;}
-  50% {bottom:50px; opacity:1;}
+  0%, 100% {bottom:30px; opacity:0.5;}
+  50% {bottom:10px; opacity:1;}
 }
 
-#scroll-down:hover{
+.scroll-down:hover{
   cursor: pointer;
+}
+
+
+#arrow2, #arrow1{
+  display: block;
+  position: relative;
+  left: 80px;
+  grid-column: 5 / span 2;
+  grid-row: 10;
+  width: 30px;
+  height: 30px;
+  border: solid 2px #00fff5;
+   border-width: 0 3px 3px 0;
+   transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+   animation: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  z-index: 12;
+
+}
+
+.back-to-top{
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: solid 2px #00fff5;
+   border-width: 3px 0px 0px 3px;
+   transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+   z-index: 12;
+   grid-column: 5 / span 2;
+   position: relative;
+   left: 90px;
+  grid-row: 10;
+  animation: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  z-index: 12;
+ 
 }
 body{
  overflow: hidden;
@@ -238,6 +354,9 @@ body{
 section{
   scroll-snap-align: start;
 }
+
+
+
 #projects{
   display: grid;
   grid-template-columns: repeat(10, 10%);
