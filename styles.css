@@ -69,6 +69,10 @@ div.container a
     z-index: 0;
     cursor: pointer;
 }
+
+.active{
+  color: blue;
+}
 /* Brackets go out */
 div.brackets a:before, div.brackets a:after
 {
@@ -275,20 +279,7 @@ li a:active{
 }
 
 .scroll-down{
-  display: block;
-  position:relative;  
-  bottom: -50px;
   
-  width: 30px;
-  height: 30px;
-  border: solid 2px #00fff5;
-   border-width: 0 3px 3px 0;
-   transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-   animation: bounce;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  z-index: 12;
  
 }
 
@@ -301,13 +292,15 @@ li a:active{
   cursor: pointer;
 }
 
+.arrow-container{
+  grid-row: 10;
+  grid-column: 1 / span 10;
+}
 
 #arrow2, #arrow1{
   display: block;
   position: relative;
-  left: 80px;
-  grid-column: 5 / span 2;
-  grid-row: 10;
+  margin: auto;
   width: 30px;
   height: 30px;
   border: solid 2px #00fff5;
@@ -330,14 +323,12 @@ li a:active{
    transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
    z-index: 12;
-   grid-column: 5 / span 2;
+   margin: auto;
    position: relative;
-   left: 90px;
-  grid-row: 10;
   animation: bounce;
   animation-duration: 1s;
   animation-iteration-count: infinite;
-  z-index: 12;
+
  
 }
 body{
@@ -582,5 +573,5 @@ p{
   justify-self: center;
 }
   
-}
+
 
